@@ -8,19 +8,19 @@
 void shellc_help(void) {
 	printf("Welcome the manual page of Shellc!");
 	printf("-h");
-  printf("-v");
+  	printf("-v");
 }
 
 void shellc_main(void) {
 	int tty_flag = 0;
-	char cmd[BUFFER];
+ 	char cmd[BUFFER];
 
 	while(tty_flag == 0) {
 		printf("name@hostname:");
 		int status = scanf("%s", cmd);
 		
 		if(status == 1) {
-			printf("%s\n", cmd);
+			system(cmd);
 		}
 		
 		else {
